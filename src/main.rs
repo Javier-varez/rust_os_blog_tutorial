@@ -23,6 +23,7 @@ fn panic(info: &PanicInfo) -> ! {
 #[no_mangle]
 pub extern "C" fn _start() {
     println!("{}!", "cool");
+    blog_os::init();
 
     #[cfg(test)]
     test_main();
